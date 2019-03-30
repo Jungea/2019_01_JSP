@@ -1,11 +1,12 @@
 package lecture1;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Date1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
 		Date today = new Date();
 		SimpleDateFormat f1 = new SimpleDateFormat("yyyy-MM-dd a hh:mm:ss");
@@ -17,6 +18,11 @@ public class Date1 {
 		SimpleDateFormat f3 = new SimpleDateFormat("yy-M-d H:m:s");
 		String s3 = f3.format(today);
 		System.out.println(s3);
+
+		String s = new String("18:03:22");
+		SimpleDateFormat f = new SimpleDateFormat("HH:mm:ss");
+		System.out.println(f.parse(s));
+
 	}
 
 }
